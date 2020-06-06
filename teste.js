@@ -31,3 +31,4 @@ var objeto = {
     name: '1'
 };
 console.log(objects(objeto));
+//# sourceMappingURL=teste.js.map

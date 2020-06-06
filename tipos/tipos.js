@@ -85,3 +85,4 @@ usuario = {
     idade: 29
 };
 console.log(usuario);
+//# sourceMappingURL=tipos.js.map
