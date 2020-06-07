@@ -110,3 +110,72 @@ usuario = {
     idade: 29
 }
 console.log(usuario)
+
+
+// bool
+let legal: boolean = false
+console.log(legal)
+
+// number
+let meuNumero: number = 15
+console.log(meuNumero)
+
+// string
+let inimigo:string = 'Ricardo'
+console.log(`Não gosto de ${inimigo}`)
+
+//array
+let frutas: string[] = ['Maça','Banana']
+let verduras:Array<string> = ['Alface','Beterraba']
+let all = [...frutas,...verduras]
+console.log(all)
+
+// tupla
+
+let nomesEIdades : [string,number] = ['Fernando',17]
+console.log(nomesEIdades)
+
+// enums
+
+enum Motos {
+    MotoBonita='Fazer 250',
+    MotoLegal='XT',
+}
+
+let m: string = Motos.MotoBonita
+console.log(m)
+
+// fetch
+// fetch('https://swapi.dev/api/planets/3').then(res => console.log(res.json()))
+
+// any
+let naoSeiOTipo: any = '12d2boolfalse'
+console.log(naoSeiOTipo)
+
+// object
+let obj: Object = {
+    name:'James'
+}
+Object.freeze(obj)
+console.log(obj)
+
+// void - funcao nao retorna nada
+
+function handleConsoleLog(param:string) : void{
+    console.log(`${param} realizado`)
+}
+handleConsoleLog('Teste')
+
+// null
+let _n: null = null
+console.log(_n)
+
+// undefined
+
+let u: undefined = undefined
+console.log(u)
+
+// union types
+
+let _nameAPI: string | null | undefined = 'Marte'
+console.log(_nameAPI)

@@ -143,25 +143,31 @@ console.log(boasVindas);
 // esperar3s(function(resultado:string) : void {
 //     console.log(resultado)
 // })
-function esperar3s(callback) {
-    setTimeout(function () {
-        callback('3s depois');
-    }, 3000);
-}
-esperar3s(function (resultado) {
-    console.log(resultado);
-});
-function esperar3sPromise() {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve('3s depois promise');
-        }, 3000);
-    });
-}
-esperar3sPromise().then(function (dado) { return console.log(dado); });
-fetch('https://swapi.dev/api/people/1')
+// function esperar3s(callback:(dado:string) => void) : void{
+//     setTimeout(() =>{ 
+//         callback(
+//             '3s depois'
+//         )
+//     }, 3000)
+// }
+// esperar3s(function(resultado:string) : void {
+//     console.log(resultado)
+// })
+// function esperar3sPromise() : any {
+//     return new Promise((resolve: any) => {
+//         setTimeout(() =>{ 
+//             resolve(
+//                 '3s depois promise'
+//             )
+//         }, 3000)
+//     })
+// }
+// esperar3sPromise().then(dado => console.log(dado))
+fetch('https://swapi.dev/api/people/q1')
     .then(function (res) { return res.json(); })
     .then(function (personagem) { return personagem.films; })
     .then(function (films) { return fetch(films[0]); })
-    .then(function (resFilms) { return resFilms.json(); }).then(function (filme) { return console.log(filme); });
+    .then(function (resFilms) { return resFilms.json(); })
+    .then(function (filme) { return console.log(filme); })
+    .catch(function (res) { return console.log(res); });
 //# sourceMappingURL=ecmascript.js.map

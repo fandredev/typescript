@@ -167,30 +167,32 @@ console.log(boasVindas)
 // esperar3s(function(resultado:string) : void {
 //     console.log(resultado)
 // })
-function esperar3s(callback:(dado:string) => void) : void{
-    setTimeout(() =>{ 
-        callback(
-            '3s depois'
-        )
-    }, 3000)
-}
-esperar3s(function(resultado:string) : void {
-    console.log(resultado)
-})
+// function esperar3s(callback:(dado:string) => void) : void{
+//     setTimeout(() =>{ 
+//         callback(
+//             '3s depois'
+//         )
+//     }, 3000)
+// }
+// esperar3s(function(resultado:string) : void {
+//     console.log(resultado)
+// })
 
-function esperar3sPromise() : any {
-    return new Promise((resolve: any) => {
-        setTimeout(() =>{ 
-            resolve(
-                '3s depois promise'
-            )
-        }, 3000)
-    })
-}
-esperar3sPromise().then(dado => console.log(dado))
+// function esperar3sPromise() : any {
+//     return new Promise((resolve: any) => {
+//         setTimeout(() =>{ 
+//             resolve(
+//                 '3s depois promise'
+//             )
+//         }, 3000)
+//     })
+// }
+// esperar3sPromise().then(dado => console.log(dado))
 
-fetch('https://swapi.dev/api/people/1')
+fetch('https://swapi.dev/api/people/q1')
 .then(res => res.json())
 .then(personagem => personagem.films)
 .then(films => fetch(films[0]))
-.then(resFilms => resFilms.json()).then(filme => console.log(filme))
+.then(resFilms => resFilms.json())
+.then(filme => console.log(filme))
+.catch(res => console.log(res))
