@@ -149,7 +149,7 @@ console.log(caracteristicas)
 
 const usuarioID: string = 'SuporteCod3r'
 const notificacoes: string = '9'
-const boasVindas = string = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes 
+const boasVindas : string = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes 
 console.log(boasVindas)
-const boasVindas2 = string = `Boas vindas ${usuarioID} notificacoes: ${parseInt(notificacoes) > 9 ? '+9': notificacoes}`
+const boasVindas2 : string = `Boas vindas ${usuarioID} notificacoes: ${parseInt(notificacoes) > 9 ? '+9': notificacoes}`
 console.log(boasVindas)

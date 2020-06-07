@@ -128,8 +128,8 @@ console.log(caracteristicas);
 // template srtings
 var usuarioID = 'SuporteCod3r';
 var notificacoes = '9';
-var boasVindas = string = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes;
+var boasVindas = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes;
 console.log(boasVindas);
-var boasVindas2 = string = "Boas vindas " + usuarioID + " notificacoes: " + (parseInt(notificacoes) > 9 ? '+9' : notificacoes);
+var boasVindas2 = "Boas vindas " + usuarioID + " notificacoes: " + (parseInt(notificacoes) > 9 ? '+9' : notificacoes);
 console.log(boasVindas);
 //# sourceMappingURL=ecmascript.js.map
