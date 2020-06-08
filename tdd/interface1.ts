@@ -1,7 +1,8 @@
 namespace String_ {
     interface InterfaceTeams {
         name: string,
-        year: number
+        year: number,
+        [success:string] : any
     }
     interface Positive {
         num: number
@@ -47,7 +48,8 @@ String_
 String_.arrayWithReadOnly_([1,3,4],'Felipe')
 let team = {
     name: 'São Paulo',
-    year: 1930
+    year: 1930,
+    success: 'São Paulo é um bom time'
 }
 let _name = {}
 // let _name = {name:'Julia'}

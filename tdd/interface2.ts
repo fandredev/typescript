@@ -7,8 +7,10 @@ namespace Examples {
     readonly renavam?: number,
     readonly plate?: string,
     color?: string,
-    people: Array<Object> | Array<string> | Array<number>
+    people: Array<Object> | Array<string> | Array<number>,
   }
+
+
   export function generateVehicle(props: Vehicles): void {
     let newBrand: string = props.brand
     newBrand = 'Saab'.toUpperCase()
