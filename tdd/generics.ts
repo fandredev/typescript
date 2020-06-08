@@ -17,6 +17,18 @@ namespace Courses {
     export function scriptsNPM<Courses>(props: Courses[]): Courses[] {
         return props
     }
+
+    export namespace Techs {
+        export function techsWeb<T>(name: T): T {
+            return name
+        }
+        export function techsMobile<T>(name: T[]): T[] {
+            return name
+        }
+        export function ageWars<Type>(name: Type[]): Type[] {
+            return name
+        }
+    }
 }
 type API = { name: string, age: number }
 
@@ -25,6 +37,12 @@ const api = {
     rating: 18,
     progress: 70
 }
+
+
+console.log(Courses.Techs.ageWars<number>([1940, 1941]))
+console.log(Courses.Techs.techsMobile<string>(['Flutter', 'Kotlin']))
+
+console.log(Courses.Techs.techsWeb<string>('Javascript'))
 
 Courses.myCoursesUsingInterfaces(api)
 Courses.myCoursesUsingGenerics<string>('Curso de Desenvolvimento Web')

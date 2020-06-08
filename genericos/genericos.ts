@@ -53,13 +53,8 @@ console.log(chamarEcho<string>('Felipe'))
 
 // Classe com generics
 
-class OperacaoBinaria {
-    constructor(public operando1: any, public operando2: any) { }
-    executar() {
-        this.operando1 + this.operando2
-    }
-}
+abstract class OperacaoBinaria<T, R> {
+    constructor(public operando1: T, public operando2: R) { }
+    abstract executar(): R
 
-console.log(new OperacaoBinaria('Bom', 'dia').executar())
-console.log(new OperacaoBinaria(3, 7).executar())
-console.log(new OperacaoBinaria(3, 'Opa').executar())
+}

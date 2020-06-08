@@ -42,12 +42,6 @@ var OperacaoBinaria = /** @class */ (function () {
         this.operando1 = operando1;
         this.operando2 = operando2;
     }
-    OperacaoBinaria.prototype.executar = function () {
-        this.operando1 + this.operando2;
-    };
     return OperacaoBinaria;
 }());
-console.log(new OperacaoBinaria('Bom', 'dia').executar());
-console.log(new OperacaoBinaria(3, 7).executar());
-console.log(new OperacaoBinaria(3, 'Opa').executar());
 //# sourceMappingURL=genericos.js.map
