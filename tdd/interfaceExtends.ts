@@ -63,13 +63,15 @@ namespace Peopless {
         favorite_color: 'amarelo',
         age: OtherInformations.age
     }
-
     function allData<Object>(props: Object): any {
         console.log(props)
     }
-
+    function filteredData<T>(props: { name: T }): any {
+        console.log(props.name)
+    }
 
     allData(data)
+    filteredData<string>({ name: 'felipe' })
 }
 
 
