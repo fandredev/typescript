@@ -2,15 +2,15 @@
 var Planets;
 (function (Planets) {
     Planets.myPlanets = function (name, position, size) {
-        var namePlanet = name;
-        var positionPlanet = position;
-        var sizePlanet = size;
+        let namePlanet = name;
+        let positionPlanet = position;
+        let sizePlanet = size;
         console.log(namePlanet, positionPlanet, sizePlanet);
     };
     Planets.myStars = function (name) {
         console.log(name);
     };
-    Planets.myComets = function (name) {
+    Planets.myComets = (name) => {
         console.log(name);
     };
 })(Planets || (Planets = {}));

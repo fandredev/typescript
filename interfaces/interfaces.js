@@ -6,10 +6,10 @@ function mudarNome(pessoa) {
     pessoa.nome = 'Joana';
     console.log(pessoa);
 }
-var pessoa = {
+const pessoa = {
     nome: 'João',
     idade: 27,
-    saudar: function (sobrenome) {
+    saudar(sobrenome) {
         console.log('OLA MEU NOME é' + this.nome + sobrenome);
     }
 };
@@ -18,63 +18,50 @@ mudarNome(pessoa);
 // saudarComOla({ nome: 'Jonas', idade: 27, xyz: true, altura: 1.75 })
 pessoa.saudar(' Skywalker');
 //
-var Cliente = /** @class */ (function () {
-    function Cliente() {
+class Cliente {
+    constructor() {
         this.nome = 'João';
         this.dataa = new Date;
     }
-    Cliente.prototype.saudar = function (sobrenome) {
+    saudar(sobrenome) {
         console.log('OLA MEU NOME é' + this.nome + sobrenome);
-    };
-    return Cliente;
-}());
-var client = new Cliente();
+    }
+}
+const client = new Cliente();
 client.nome = 'Han';
 saudarComOla(client);
 client.saudar(' Solo');
-var potencia;
+let potencia;
 potencia = function (base, exp) {
     return Math.pow(base, exp);
 };
 console.log(potencia(3, 10));
 console.log(Math.pow(3, 10));
 console.log(Math.pow(3, 10));
-var RealA = /** @class */ (function () {
-    function RealA() {
-    }
-    RealA.prototype.a = function () { };
-    return RealA;
-}());
-var RealB = /** @class */ (function () {
-    function RealB() {
-    }
-    RealB.prototype.a = function () { };
-    RealB.prototype.b = function () { };
-    return RealB;
-}());
-var RealABC = /** @class */ (function () {
-    function RealABC() {
-    }
-    RealABC.prototype.a = function () { };
-    RealABC.prototype.b = function () { };
-    RealABC.prototype.c = function () { };
-    return RealABC;
-}());
+class RealA {
+    a() { }
+}
+class RealB {
+    a() { }
+    b() { }
+}
+class RealABC {
+    a() { }
+    b() { }
+    c() { }
+}
 // function testes(b: B) { }
 // testes(new RealABC)
-var AbstrataABD = /** @class */ (function () {
-    function AbstrataABD() {
-    }
-    AbstrataABD.prototype.a = function () { };
-    AbstrataABD.prototype.b = function () { };
-    return AbstrataABD;
-}());
+class AbstrataABD {
+    a() { }
+    b() { }
+}
 Object.prototype.log = function () {
     console.log(this.toString());
 };
-var aaa = 2;
-var bb = 2;
-var cc = 2;
+const aaa = 2;
+const bb = 2;
+const cc = 2;
 aaa.log();
 bb.log();
 cc.log();

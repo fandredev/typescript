@@ -2,8 +2,8 @@
 var String_;
 (function (String_) {
     function arrayWithReadOnly_(numm, strr) {
-        var a = numm;
-        var __name = strr;
+        let a = numm;
+        let __name = strr;
         console.log(a, __name);
         // a[0] = 12 // erro porq a props é somente leitura
     }
@@ -12,7 +12,7 @@ var String_;
         return n1 + n2;
     }
     String_.sum = sum;
-    var positive_ = { num: 1 };
+    const positive_ = { num: 1 };
     console.log(positive_);
     function returnListTimes(param) {
         console.log(param.name, param.year);
@@ -23,7 +23,7 @@ var String_;
     }
     String_.returnMyName = returnMyName;
     function returnMyProfession() {
-        var desc = { name: 'Fabiano', profession: 'Faxineiro' };
+        let desc = { name: 'Fabiano', profession: 'Faxineiro' };
         desc.name = 'Catarina';
         return desc;
         // desc.profession = 'Engenheiro de Software' // erro porque a props myProfession é read only
@@ -32,14 +32,14 @@ var String_;
 })(String_ || (String_ = {}));
 String_;
 String_.arrayWithReadOnly_([1, 3, 4], 'Felipe');
-var team = {
+let team = {
     name: 'São Paulo',
     year: 1930,
     success: 'São Paulo é um bom time'
 };
-var _name = {};
+let _name = {};
 // let _name = {name:'Julia'}
-var profession = {
+let profession = {
     name: 'Janaína',
     profession: 'Dev'
 };

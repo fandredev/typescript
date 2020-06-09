@@ -18,7 +18,7 @@ var TiposBasicos;
         return arr;
     }
     TiposBasicos.generateTypeArray = generateTypeArray;
-    var OutrosTipos;
+    let OutrosTipos;
     (function (OutrosTipos) {
         function generateNull(type) {
             return type;
@@ -37,7 +37,7 @@ var TiposBasicos;
         }
         OutrosTipos.noReturn = noReturn;
     })(OutrosTipos = TiposBasicos.OutrosTipos || (TiposBasicos.OutrosTipos = {}));
-    var UnionTypes;
+    let UnionTypes;
     (function (UnionTypes) {
         function generate(props) {
             return typeof props === 'string' ? 'String' : 'Number';
@@ -46,7 +46,7 @@ var TiposBasicos;
     })(UnionTypes = TiposBasicos.UnionTypes || (TiposBasicos.UnionTypes = {}));
 })(TiposBasicos || (TiposBasicos = {}));
 // obs any
-var list = [1, 2, false, 'Oi', {}, []];
+let list = [1, 2, false, 'Oi', {}, []];
 console.log(list, ' Não sei o tipo que o array ira receber');
 console.log(TiposBasicos.generateTypeString('felipe'));
 console.log(TiposBasicos.generateTypeNumber(1));
@@ -70,13 +70,13 @@ console.log(Tupla.vehiclesModels);
 console.log(Tupla.agePeople);
 var Enum;
 (function (Enum) {
-    var Numbers;
+    let Numbers;
     (function (Numbers) {
         Numbers[Numbers["numeroPar"] = 10] = "numeroPar";
         Numbers[Numbers["numeroImpar"] = 11] = "numeroImpar";
     })(Numbers = Enum.Numbers || (Enum.Numbers = {}));
 })(Enum || (Enum = {}));
-var numberPar = Enum.Numbers.numeroPar;
-var numberImpar = Enum.Numbers.numeroImpar;
+let numberPar = Enum.Numbers.numeroPar;
+let numberImpar = Enum.Numbers.numeroImpar;
 console.log(numberPar + numberImpar);
 //# sourceMappingURL=tipos-basicos.js.map

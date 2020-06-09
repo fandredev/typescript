@@ -1,7 +1,6 @@
 "use strict";
-var Produto = /** @class */ (function () {
-    function Produto(nome, preco, desconto) {
-        if (desconto === void 0) { desconto = 0; }
+class Produto {
+    constructor(nome, preco, desconto = 0) {
         this.nome = nome;
         this.preco = preco;
         this.desconto = desconto;
@@ -11,16 +10,15 @@ var Produto = /** @class */ (function () {
     //     preco = res
     //     return preco
     // }
-    Produto.prototype.precoComDesconto = function () {
+    precoComDesconto() {
         return this.preco * (1 - this.desconto);
-    };
-    Produto.prototype.resumo = function () {
-        return this.nome + " custa " + this.precoComDesconto() + " (" + this.desconto * 100 + "% off)";
-    };
-    return Produto;
-}());
-var product = new Produto('Maquina de lavar', 600);
-var product2 = new Produto('Nootbook', 1000, 0.20);
+    }
+    resumo() {
+        return `${this.nome} custa ${this.precoComDesconto()} (${this.desconto * 100}% off)`;
+    }
+}
+let product = new Produto('Maquina de lavar', 600);
+let product2 = new Produto('Nootbook', 1000, 0.20);
 console.log(product2.resumo());
 // console.log(product2.precoComDesconto(1000,0.2))
 // desafio 2
@@ -40,23 +38,19 @@ console.log(product2.resumo());
 // console.log(moto.velocidade)
 // moto.acelerar(30)
 // console.log(moto.velocidade)
-var Moto = /** @class */ (function () {
-    function Moto(name, velocidade) {
-        var _this = this;
-        if (name === void 0) { name = 'Felipe'; }
-        if (velocidade === void 0) { velocidade = 0; }
+class Moto {
+    constructor(name = 'Felipe', velocidade = 0) {
         this.name = name;
         this.velocidade = velocidade;
-        this.buzinar = function () {
+        this.buzinar = () => {
             console.log('Toooooooooot!');
         };
-        this.acelerar = function (delta) {
-            _this.velocidade = _this.velocidade + delta;
+        this.acelerar = (delta) => {
+            this.velocidade = this.velocidade + delta;
         };
     }
-    return Moto;
-}());
-var moto = new Moto('Ducati');
+}
+const moto = new Moto('Ducati');
 moto.buzinar();
 console.log(moto.velocidade, 'Velocidade do metodo public velocidade');
 moto.acelerar(30);

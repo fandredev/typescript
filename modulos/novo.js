@@ -1,6 +1,6 @@
 "use strict";
 module.exports = {
-    digaOi: function (nome) {
+    digaOi(nome) {
         return "Oi".concat(nome);
     }
 };

@@ -1,7 +1,7 @@
 "use strict";
 var Geometria;
 (function (Geometria) {
-    var Areas;
+    let Areas;
     (function (Areas) {
         // const PI = 3.14
         function retangulo(base, altura) {

@@ -9,18 +9,17 @@ var Functions;
         return props.x * props.y;
     }
     Functions.multiExtends = multiExtends;
-    var abc = function (a, b) { return a + b; };
+    let abc = function (a, b) { return a + b; };
     console.log(abc(10, 2));
     function functionWithLetLocal(props) {
-        var c = 10;
+        let c = 10;
         return props.x + props.x + c;
     }
     Functions.functionWithLetLocal = functionWithLetLocal;
-    function nameDoctor(name, age) {
-        if (name === void 0) { name = 'Bob'; }
-        var a = age === undefined ? '' : age;
-        var b = name === undefined ? '' : name;
-        var all = a + b;
+    function nameDoctor(name = 'Bob', age) {
+        const a = age === undefined ? '' : age;
+        const b = name === undefined ? '' : name;
+        const all = a + b;
         return all;
     }
     Functions.nameDoctor = nameDoctor;

@@ -1,9 +1,9 @@
 "use strict";
 var Geometria;
 (function (Geometria) {
-    var Areas;
+    let Areas;
     (function (Areas) {
-        var PI = 3.14;
+        const PI = 3.14;
         function circuferencia(raio) {
             return PI * Math.pow(raio, 2);
         }

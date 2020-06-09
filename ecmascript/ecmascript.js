@@ -1,22 +1,15 @@
 "use strict";
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
-var seraQuePode = '?';
+let seraQuePode = '?';
 console.log(seraQuePode);
-var estaFrio = true;
+let estaFrio = true;
 if (estaFrio) {
     // var acao = 'Colocar casaco'
-    var acao = 'Colocar casaco';
+    let acao = 'Colocar casaco';
     console.log(acao);
 }
 // console.log(acao)
 // const cpf: string = '123.456.789-99'
-var cpf = '123.456.789-99';
+let cpf = '123.456.789-99';
 // cpf = '782.312.321-91'
 console.log(cpf);
 var segredo = 'externo';
@@ -28,7 +21,7 @@ relevar();
 console.log(segredo);
 {
     {
-        var def = 'def';
+        const def = 'def';
         console.log(def);
     }
 }
@@ -36,7 +29,7 @@ console.log(segredo);
 //     console.log(i)
 // }
 // console.log(i)
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     console.log(i);
 }
 // console.log(i)
@@ -46,13 +39,13 @@ function somar(n1, n2) {
 }
 console.log(somar(2, 2));
 // const subtrair = (n1: number, n2: number) : number => n1 - n2
-var subtrair = function (n1, n2) {
+const subtrair = (n1, n2) => {
     return n1 - n2;
 };
 console.log(subtrair(2, 3));
-var saudacao = function () { return console.log('Olá'); };
+const saudacao = () => console.log('Olá');
 saudacao();
-var falarCom = function (pessoa) { return console.log("Ola " + pessoa); };
+const falarCom = (pessoa) => console.log(`Ola ${pessoa}`);
 falarCom('João');
 // this 
 //  function normalComThis(): any{
@@ -64,9 +57,7 @@ falarCom('João');
 // const arrowComThis = (): any => console.log(this)
 // arrowComThis()
 // parametro padrao
-function contagemRegressiva(inicio, fim) {
-    if (inicio === void 0) { inicio = 5; }
-    if (fim === void 0) { fim = inicio - 5; }
+function contagemRegressiva(inicio = 5, fim = inicio - 5) {
     console.log(inicio);
     while (inicio > fim) {
         inicio--;
@@ -76,10 +67,10 @@ function contagemRegressiva(inicio, fim) {
 contagemRegressiva();
 contagemRegressiva(2);
 // operador rest & spread
-var numbers = [1, 10, 99, -5];
-console.log(Math.max.apply(Math, numbers));
-var turmaA = ['João', 'Maria', 'Fernanda'];
-var sala = __spreadArrays(['Fernando', 'Miguel', 'Lorena'], turmaA);
+const numbers = [1, 10, 99, -5];
+console.log(Math.max(...numbers));
+const turmaA = ['João', 'Maria', 'Fernanda'];
+const sala = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
 console.log(sala);
 // function retornarArray(...args: number[]): number[] {
 //     console.log(a)
@@ -88,49 +79,45 @@ console.log(sala);
 // const number = retornarArray(...numbers)
 // console.log(number)
 // rest e spread tupla
-var tupla = [1, 'abc', false];
+const tupla = [1, 'abc', false];
 function tuplaParam1(a, b, c) {
-    console.log(a + " " + b + " " + c);
+    console.log(`${a} ${b} ${c}`);
 }
-tuplaParam1.apply(void 0, tupla);
-function tuplaParam2() {
-    var param = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        param[_i] = arguments[_i];
-    }
+tuplaParam1(...tupla);
+function tuplaParam2(...param) {
     console.log(Array.isArray(param));
-    console.log("" + param[0] + param[1] + " " + param[2]);
+    console.log(`${param[0]}${param[1]} ${param[2]}`);
 }
-tuplaParam2.apply(void 0, tupla);
+tuplaParam2(...tupla);
 // destructuring[array]
-var caracteristicas = ['Motor Zetec 1.8', 2020];
+const caracteristicas = ['Motor Zetec 1.8', 2020];
 // const motor = caracteristicas[0]
 // const ano = caracteristicas[1]
-var motor = caracteristicas[0], ano = caracteristicas[1];
+const [motor, ano] = caracteristicas;
 console.log(motor);
 console.log(ano);
 // const [w,z] = [2,3]
 // destructuring[objeto]
-var item = {
+const item = {
     nome: 'SSD 480GB',
     preco: 200,
     caracteristicas: {
         w: 'importado'
     }
 };
-var nomeItem = item.nome;
-var precoItem = item.preco;
+const nomeItem = item.nome;
+const precoItem = item.preco;
 console.log(nomeItem, precoItem);
-var n = item.nome, preco = item.preco, w = item.caracteristicas.w;
+const { nome: n, preco, caracteristicas: { w } } = item;
 console.log(n);
 console.log(preco);
 console.log(caracteristicas);
 // template srtings
-var usuarioID = 'SuporteCod3r';
-var notificacoes = '9';
-var boasVindas = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes;
+const usuarioID = 'SuporteCod3r';
+const notificacoes = '9';
+const boasVindas = 'Boas vindas' + usuarioID + 'notificacoes' + notificacoes;
 console.log(boasVindas);
-var boasVindas2 = "Boas vindas " + usuarioID + " notificacoes: " + (parseInt(notificacoes) > 9 ? '+9' : notificacoes);
+const boasVindas2 = `Boas vindas ${usuarioID} notificacoes: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}`;
 console.log(boasVindas);
 // callback
 // function esperar3s(callback:(dado:string) => void) : void{
@@ -164,10 +151,10 @@ console.log(boasVindas);
 // }
 // esperar3sPromise().then(dado => console.log(dado))
 fetch('https://swapi.dev/api/people/q1')
-    .then(function (res) { return res.json(); })
-    .then(function (personagem) { return personagem.films; })
-    .then(function (films) { return fetch(films[0]); })
-    .then(function (resFilms) { return resFilms.json(); })
-    .then(function (filme) { return console.log(filme); })
-    .catch(function (res) { return console.log(res); });
+    .then(res => res.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(resFilms => resFilms.json())
+    .then(filme => console.log(filme))
+    .catch(res => console.log(res));
 //# sourceMappingURL=ecmascript.js.map

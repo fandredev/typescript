@@ -1,10 +1,10 @@
 // string
-let nome : string = 'João'
+let nome: string = 'João'
 console.log(nome)
 // nome = 28
 
 // numbers
-let idade : number = 27
+let idade: number = 27
 // idade = 'Ana'
 idade = 27.5
 console.log(idade)
@@ -38,9 +38,9 @@ console.log(hobbies)
 
 // tuplas
 
-let endereco: [string,number,number] = ['Av principal', 99,123]
+let endereco: [string, number, number] = ['Av principal', 99, 123]
 console.log(endereco)
-endereco = ['Rua importante',1260,22]
+endereco = ['Rua importante', 1260, 22]
 console.log(endereco)
 
 // enums
@@ -48,54 +48,50 @@ console.log(endereco)
 enum Cor {
     Cinza, //0
     Verde = 100, //100
-    Azul = 10,   
-    Laranja= 1,
+    Azul = 10,
+    Laranja = 1,
     Amarelo // 2
 }
-let minhaCor:Cor = Cor.Verde
+let minhaCor: Cor = Cor.Verde
 console.log(Cor.Azul, Cor.Laranja, Cor.Amarelo)
 
 // any
 let carro: any = 'BMW'
 carro = 1
-carro = {marca:'BMW', ano: 2019}
+carro = { marca: 'BMW', ano: 2019 }
 console.log(carro)
 
 
 // funcao
 
-function retornaMeuNome() : string {
+function retornaMeuNome(): string {
     return nome
     // return idade
 }
 console.log(retornaMeuNome())
 
-function digaOi() : void { // Não retorna nada
+function digaOi(): void { // Não retorna nada
     console.log('digaOi')
     // return minhaIdade
 }
 console.log(digaOi())
 
-function multiplicar(number1: number, number2: number) : number { 
+function multiplicar(number1: number, number2: number): number {
     return number1 * number2
 }
 // console.log(multiplicar(2,'str'))
-console.log(multiplicar(2,2))
-
-function teste(){
-
-}
+console.log(multiplicar(2, 2))
 
 // tipo funcao
 let calculo: (num1: number, num2: number) => number
 calculo = multiplicar
 
-console.log(calculo(5,6))
+console.log(calculo(5, 6))
 
 // objetos
 
-let usuario: {nome: string, idade: number} = {
-    nome:'Felipe',
+let usuario: { nome: string, idade: number } = {
+    nome: 'Felipe',
     idade: 18
 }
 console.log(usuario)
@@ -106,7 +102,7 @@ console.log(usuario)
 // }
 
 usuario = {
-    nome:'Pedro',
+    nome: 'Pedro',
     idade: 29
 }
 console.log(usuario)
@@ -121,25 +117,25 @@ let meuNumero: number = 15
 console.log(meuNumero)
 
 // string
-let inimigo:string = 'Ricardo'
+let inimigo: string = 'Ricardo'
 console.log(`Não gosto de ${inimigo}`)
 
 //array
-let frutas: string[] = ['Maça','Banana']
-let verduras:Array<string> = ['Alface','Beterraba']
-let all = [...frutas,...verduras]
+let frutas: string[] = ['Maça', 'Banana']
+let verduras: Array<string> = ['Alface', 'Beterraba']
+let all = [...frutas, ...verduras]
 console.log(all)
 
 // tupla
 
-let nomesEIdades : [string,number] = ['Fernando',17]
+let nomesEIdades: [string, number] = ['Fernando', 17]
 console.log(nomesEIdades)
 
 // enums
 
 enum Motos {
-    MotoBonita='Fazer 250',
-    MotoLegal='XT',
+    MotoBonita = 'Fazer 250',
+    MotoLegal = 'XT',
 }
 
 let m: string = Motos.MotoBonita
@@ -154,14 +150,14 @@ console.log(naoSeiOTipo)
 
 // object
 let obj: Object = {
-    name:'James'
+    name: 'James'
 }
 Object.freeze(obj)
 console.log(obj)
 
 // void - funcao nao retorna nada
 
-function handleConsoleLog(param:string) : void{
+function handleConsoleLog(param: string): void {
     console.log(`${param} realizado`)
 }
 handleConsoleLog('Teste')

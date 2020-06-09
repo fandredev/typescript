@@ -3,11 +3,11 @@ var control = 'Controle';
 console.log(control);
 var Variables;
 (function (Variables) {
-    var Var;
+    let Var;
     (function (Var) {
         function generateText(text) {
             var b = 'Beleza';
-            return text.toUpperCase() + " " + b + " ? ";
+            return `${text.toUpperCase()} ${b} ? `;
         }
         Var.generateText = generateText;
         var field = 'input';
@@ -23,14 +23,14 @@ var Variables;
         }
         Var.scopeVar = scopeVar;
     })(Var = Variables.Var || (Variables.Var = {}));
-    var Let;
+    let Let;
     (function (Let) {
         function generateTextWithLet(type) {
             return type;
         }
         Let.generateTextWithLet = generateTextWithLet;
     })(Let = Variables.Let || (Variables.Let = {}));
-    var Const;
+    let Const;
     (function (Const) {
         // const nameDirector = 'Paulo'
         // export function changeNameDirector(name: string) : string {

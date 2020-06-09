@@ -2,26 +2,26 @@
 var Examples;
 (function (Examples) {
     function generateVehicle(props) {
-        var newBrand = props.brand;
+        let newBrand = props.brand;
         newBrand = 'Saab'.toUpperCase();
-        var newModel = props.model;
+        let newModel = props.model;
         newModel = '9000 CD 2.3 Turbo'.toUpperCase();
-        var newYear = props.year;
+        let newYear = props.year;
         newYear.toPrecision(4);
-        props.people.forEach(function (props) {
-            var response = [
+        props.people.forEach((props) => {
+            const response = [
                 newBrand, newModel, newYear, props.renavam, props.name, props.age, props.plate
             ].join(' | ');
             console.log(response);
         });
     }
     Examples.generateVehicle = generateVehicle;
-    var Account;
+    let Account;
     (function (Account) {
         function generateAccounts(props) {
-            var myAccount = Object.create(null);
+            let myAccount = Object.create(null);
             myAccount = props;
-            myAccount.address.map(function (p) {
+            myAccount.address.map((p) => {
                 p.number = 15;
             });
             console.log(myAccount);

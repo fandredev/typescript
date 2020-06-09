@@ -16,13 +16,13 @@ console.log(echoMelhorado(27));
 console.log(echoMelhorado(27));
 console.log(echoMelhorado({ nome: 'joao' }));
 // generics disponiveis na api
-var avaliacoes = [10, 93.5, 5.7];
+const avaliacoes = [10, 93.5, 5.7];
 avaliacoes.push(8.4);
 // avaliacoes.push('58.4')
 console.log(avaliacoes);
 // array
 function imprimir(args) {
-    args.forEach(function (elemento) { return console.log(elemento); });
+    args.forEach(elemento => console.log(elemento));
 }
 imprimir([1, 2, 3]);
 imprimir([1, 2, 3]);
@@ -34,14 +34,13 @@ imprimir([
     { nome: 'Julia', idade: 10 }
 ]);
 // const chamarEcho: <T>(data: T) => T = echoMelhorado
-var chamarEcho = echoMelhorado;
+const chamarEcho = echoMelhorado;
 console.log(chamarEcho('Felipe'));
 // Classe com generics
-var OperacaoBinaria = /** @class */ (function () {
-    function OperacaoBinaria(operando1, operando2) {
+class OperacaoBinaria {
+    constructor(operando1, operando2) {
         this.operando1 = operando1;
         this.operando2 = operando2;
     }
-    return OperacaoBinaria;
-}());
+}
 //# sourceMappingURL=genericos.js.map
