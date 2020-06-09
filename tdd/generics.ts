@@ -49,3 +49,70 @@ Courses.myCoursesUsingGenerics<string>('Curso de Desenvolvimento Web')
 Courses.myCoursesUsingGenerics('Curso de Desenvolvimento Web') // inferencia de tipos
 Courses.allPropsMyCourses(['Curso de Typescript', 5, 70])
 console.log(Courses.scriptsNPM<string>(['Dev', 'Run']))
+
+
+
+namespace OtherGenerics {
+    export function lorem<T>(props: T): void {
+        console.log(props)
+    }
+    export function filitation<Type>(a: Type): void {
+        console.log(a)
+    }
+    export function login<Log>(login: Log): void {
+        console.log(login)
+    }
+    export function physics<Type>(props: Type): void {
+        console.log(props)
+    }
+}
+
+type pyhsics = {
+    height: string,
+    weight: number,
+    readonly blood_type: string
+}
+type lorem = {
+    name: string,
+    readonly cpf: number,
+    readonly rg: number,
+    readonly signo: string
+}
+type filiation = {
+    mother: string,
+    father: string
+}
+type login = {
+    email: string
+    password: string
+}
+const objo: lorem = {
+    name: 'Felipe',
+    cpf: 29175210584,
+    rg: 294706835,
+    signo: 'Escorpião'
+}
+const objFiliation: filiation = {
+    ...objo,
+    mother: 'Malu Adriana',
+    father: 'Iago Anderson Theo Vieira'
+}
+const objLogin: login = {
+    ...objo,
+    ...objFiliation,
+    email: 'isabellasarahisisvieira..isabellasarahisisvieira@raffinimobiliario.com.br',
+    password: '9iqJQPZXR5'
+}
+const allPropsAndPhysic: pyhsics = {
+    ...objo,
+    ...objFiliation,
+    ...objLogin,
+    weight: 50,
+    blood_type: 'AB+',
+    height: '1.50'
+}
+OtherGenerics.lorem<Object>(objo)
+OtherGenerics.filitation<Object>(objFiliation)
+OtherGenerics.login<Object>(objLogin)
+OtherGenerics.physics<Object>(allPropsAndPhysic)
+
