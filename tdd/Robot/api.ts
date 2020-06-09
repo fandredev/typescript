@@ -8,7 +8,6 @@ namespace Robot {
         readonly creators: Array<string> | undefined,
         readonly country: Array<string> | undefined,
         price: number
-
     }
     abstract class Resources implements I_Robot {
         name: string
@@ -19,7 +18,6 @@ namespace Robot {
         creators: Array<string>
         country: string[]
         price: number
-
         constructor(n: string, c: string, weight: number, think: boolean, talk: boolean, creators: Array<string>, country: Array<string>, price: number) {
             this.name = n
             this.color = c
@@ -33,7 +31,6 @@ namespace Robot {
     }
     export class RobotAPI extends Resources {
         public techs: Array<string>
-
         constructor(
             public name: string,
             color: string,
