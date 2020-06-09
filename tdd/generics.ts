@@ -30,6 +30,7 @@ namespace Courses {
         }
     }
 }
+
 type API = { name: string, age: number }
 
 const api = {
@@ -67,26 +68,36 @@ namespace OtherGenerics {
     }
 }
 
-type pyhsics = {
-    height: string,
-    weight: number,
-    readonly blood_type: string
+enum ID {
+    first = 1,
+    second,
+    third,
+    four
 }
 type lorem = {
+    readonly id: number,
     name: string,
     readonly cpf: number,
     readonly rg: number,
     readonly signo: string
 }
 type filiation = {
+    readonly id: number
     mother: string,
     father: string
 }
 type login = {
+    readonly id: number
     email: string
     password: string
 }
+type pyhsics = {
+    height: string,
+    weight: number,
+    readonly blood_type: string
+}
 const objo: lorem = {
+    id: ID.first,
     name: 'Felipe',
     cpf: 29175210584,
     rg: 294706835,
