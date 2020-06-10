@@ -1,12 +1,5 @@
+import { I_SixPresidentsBrazil } from './interface'
 namespace SixthRepublic {
-    interface I_SixPresidentsBrazil {
-        name: string,
-        broken: string
-        term_office: string
-        vice: string
-        current: boolean
-        reelection: boolean
-    }
     abstract class SixthRepublic implements I_SixPresidentsBrazil {
         name: string
         broken: string
@@ -50,7 +43,7 @@ namespace SixthRepublic {
     }
 }
 
-const presidents = new SixthRepublic.Presidents(
+export const presidents = new SixthRepublic.Presidents(
     'Deodoro da Fonseca',
     '',
     '2 anos e 8 dias',
@@ -59,6 +52,5 @@ const presidents = new SixthRepublic.Presidents(
     false,
     'Não'
 )
-
 console.log(SixthRepublic.viewMyPresidentNow('Bolsonaro'))
 console.log(presidents)
