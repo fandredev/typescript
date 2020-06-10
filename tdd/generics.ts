@@ -127,3 +127,68 @@ OtherGenerics.filitation<Object>(objFiliation)
 OtherGenerics.login<Object>(objLogin)
 OtherGenerics.physics<Object>(allPropsAndPhysic)
 
+// seguindo documentacao
+
+function identity<type>(arg: type[]): type[] {
+    return arg
+}
+function identityWithGeneric<T>(arg: T): T {
+    return arg
+}
+let output = identityWithGeneric<string>('string') // sem inferencia de tipos
+let inferenceOutput = identityWithGeneric('string') // com inferencia de tipos
+
+let numberS: Array<number> = identity<number>([1, 2, 3])
+console.log(numberS)
+
+// generics
+interface GenericIdentityFn<T> {
+    (arg: T): T
+}
+function returnVarGeneric<T>(props: T): T {
+    return props
+}
+let returnVar: <U>(arg: U) => U = returnVarGeneric // let com funcao associada ao generica
+returnVar(string)
+let oBjeto: GenericIdentityFn<number> = returnVarGeneric
+
+
+function iDentity<T, U, P>(field: T, other: U, other2: P): T {
+    console.log(other, other2)
+    return field
+}
+
+const daTa = {
+    atr: 'Atributte',
+    age: '20',
+    field: 'input'
+}
+console.log(
+    iDentity<string, string, boolean>('Felipe', 'JUlia', true)
+)
+
+
+function returnPlanetsAndOrder<T, D>(name: T, distance: D): T {
+    console.log(distance)
+    return name
+}
+console.log(
+    returnPlanetsAndOrder<string, number>('Mercúrio', 1)
+)
+
+function returnPlanetsAndPositions<T, bool>(position: T, fixed: bool): T {
+    console.log(fixed)
+    return position
+}
+
+console.log(
+    returnPlanetsAndPositions<string, boolean>('Marte', true)
+)
+
+function returnAllPlanets<arr>(array: arr): arr {
+    return array
+}
+
+console.log(
+    returnAllPlanets<Array<string>>(['Marte', 'Júpiter'])
+)
