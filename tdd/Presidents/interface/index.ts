@@ -1,8 +1,8 @@
-export interface I_SixPresidentsBrazil {
-    name: string,
-    broken: string
-    term_office: string
-    vice: string
-    current: boolean
-    reelection: boolean
+export interface I_SixPresidentsBrazil<Str,Bool> {
+    name: Str,
+    broken: Str
+    term_office: Str
+    vice: Str
+    current: Bool
+    reelection: Bool
 }

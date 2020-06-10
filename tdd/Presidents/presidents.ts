@@ -1,14 +1,14 @@
 import { I_SixPresidentsBrazil } from './interface'
 namespace SixthRepublic {
-    abstract class SixthRepublic implements I_SixPresidentsBrazil {
-        name: string
-        broken: string
-        term_office: string
-        vice: string
-        current: boolean
-        reelection: boolean
-        corrupt?: string
-        constructor(name: string, broken: string, term_office: string, vice: string, current: boolean, reelection: boolean, corrupt?: string) {
+    abstract class SixthRepublic<Str,Bool> implements I_SixPresidentsBrazil<Str,Bool> {
+        name: Str
+        broken: Str
+        term_office: Str
+        vice: Str
+        current: Bool
+        reelection: Bool
+        corrupt?: Str
+        constructor(name: Str, broken: Str, term_office: Str, vice: Str, current: Bool, reelection: Bool, corrupt?: Str) {
             this.name = name
             this.broken = broken
             this.term_office = term_office
@@ -18,16 +18,16 @@ namespace SixthRepublic {
             this.corrupt = corrupt
         }
     }
-    export class Presidents extends SixthRepublic {
-        public name: string
-        public broken: string
-        public term_office: string
-        public vice: string
-        public current: boolean
-        public reelection: boolean
-        public corrupt?: string
+    export class Presidents<Str,Bool> extends SixthRepublic<Str,Bool> {
+        public name: Str
+        public broken: Str
+        public term_office: Str
+        public vice: Str
+        public current: Bool
+        public reelection: Bool
+        public corrupt?: Str
 
-        constructor(name: string, broken: string, term_office: string, vice: string, current: boolean, reelection: boolean, corrupt?: string) {
+        constructor(name: Str, broken: Str, term_office: Str, vice: Str, current: Bool, reelection: Bool, corrupt?: Str) {
             super(name, broken, term_office, vice, reelection, current, corrupt)
             this.name = name
             this.broken = broken
@@ -38,12 +38,12 @@ namespace SixthRepublic {
             this.corrupt = corrupt
         }
     }
-    export function viewMyPresidentNow(name: string): string {
+    export function viewMyPresidentNow<Str>(name: Str): Str {
         return name
     }
 }
 
-export const presidents = new SixthRepublic.Presidents(
+export const presidents = new SixthRepublic.Presidents<string,boolean>(
     'Deodoro da Fonseca',
     '',
     '2 anos e 8 dias',
@@ -53,5 +53,5 @@ export const presidents = new SixthRepublic.Presidents(
     'Não'
 )
 
-console.log(SixthRepublic.viewMyPresidentNow('Bolsonaro'))
+console.log(SixthRepublic.viewMyPresidentNow<string>('Bolsonaro'))
 console.log(presidents)
