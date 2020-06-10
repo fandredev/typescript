@@ -1,19 +1,9 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const classes_1 = require("./classes");
 var Robot;
 (function (Robot) {
-    class Resources {
-        constructor(n, c, weight, think, talk, creators, country, price) {
-            this.name = n;
-            this.color = c;
-            this.weight = weight;
-            this.think = think,
-                this.talk = talk,
-                this.creators = creators,
-                this.country = country,
-                this.price = price;
-        }
-    }
-    class RobotAPI extends Resources {
+    class RobotAPI extends classes_1.Resources {
         constructor(name, color, weight, think, talk, creators, country, price, techs) {
             super(name, color, weight, think, talk, creators, country, price);
             this.name = name;
@@ -22,7 +12,8 @@ var Robot;
     }
     Robot.RobotAPI = RobotAPI;
 })(Robot || (Robot = {}));
-const created = new Robot.RobotAPI('Robot M.Z', 'Branca', 1.90, true, false, ['Luby S.A', 'Software S.O'], ['Brasil', 'Canadá'], 74.000, ['Javascript', 'C', 'C#']);
+const Ccreated = new Robot.RobotAPI('Robot M.Z', 'Branca', 1.90, true, false, ['Luby S.A', 'Software S.O'], ['Brasil', 'Canadá'], 74.000, ['Javascript', 'C', 'C#']);
+console.log(Ccreated);
 class Production {
     constructor(y, f, ss, sss, ssss) {
         this.year = 2020;
@@ -42,7 +33,7 @@ let createdRobot = new Production(2020, true, 'www.robot.io', true, true);
 // .implementationsOpenedNewYears('Resolve SGBD implementations', 'Migrate JS to TS files and using Deno')
 const createds = {
     createdRobot,
-    created,
+    Ccreated,
     implementations: ['Resolve SGBD implementations', 'Migrate JS to TS files and using Deno']
 };
 Object.preventExtensions(createds);

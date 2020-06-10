@@ -1,4 +1,5 @@
 import { I_Browsers } from './interfaces'
+import type { filteredBrowsers } from './types'
 namespace Browsers {
     abstract class Base implements I_Browsers {
         name: string
@@ -32,7 +33,6 @@ namespace Browsers {
             this.year_find = year_find
             this.image_url = image_url
         }
-
     }
 }
 
@@ -46,8 +46,6 @@ const browsers = {
 }
 
 Object.freeze(browsers)
-
-type filteredBrowsers = Pick<I_Browsers, 'name' | 'second_name'>
 
 function filteredBrowsersName(props: filteredBrowsers, props_: filteredBrowsers): void {
     console.log(`Primeiro: ${props.name} | Segundo ${props_.name}`)

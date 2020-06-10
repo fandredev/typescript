@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.presidents = void 0;
 var SixthRepublic;
 (function (SixthRepublic_1) {
     class SixthRepublic {
@@ -30,7 +32,7 @@ var SixthRepublic;
     }
     SixthRepublic_1.viewMyPresidentNow = viewMyPresidentNow;
 })(SixthRepublic || (SixthRepublic = {}));
-const presidents = new SixthRepublic.Presidents('Deodoro da Fonseca', '', '2 anos e 8 dias', 'Floariano Peixoto', false, false, 'Não');
+exports.presidents = new SixthRepublic.Presidents('Deodoro da Fonseca', '', '2 anos e 8 dias', 'Floariano Peixoto', false, false, 'Não');
 console.log(SixthRepublic.viewMyPresidentNow('Bolsonaro'));
-console.log(presidents);
+console.log(exports.presidents);
 //# sourceMappingURL=presidents.js.map

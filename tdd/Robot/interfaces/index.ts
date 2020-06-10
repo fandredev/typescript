@@ -15,3 +15,7 @@ export interface I_InfoRobots {
     store: boolean
 }
 export interface I_Success_Robot_Finished extends I_InfoRobots { success: boolean | undefined }
+
+export interface I_futureRobot extends I_Success_Robot_Finished {
+    name: boolean | number
+}

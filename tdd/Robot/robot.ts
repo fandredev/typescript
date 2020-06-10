@@ -1,6 +1,6 @@
-import { I_Success_Robot_Finished, } from './interfaces'
+import { I_Success_Robot_Finished, I_futureRobot as I_Robot } from './interfaces'
 import { Resources } from './classes'
-import { Questions, Tech } from './type'
+import type { Questions, Tech } from './type'
 namespace Robot {
     export class RobotAPI extends Resources {
         public techs: Array<string>
@@ -20,6 +20,7 @@ namespace Robot {
         }
     }
 }
+
 const Ccreated = new Robot.RobotAPI(
     'Robot M.Z', 'Branca', 1.90, true, false, ['Luby S.A', 'Software S.O'], ['Brasil', 'Canadá'], 74.000, ['Javascript', 'C', 'C#']
 )
@@ -45,7 +46,7 @@ let createdRobot =
 // .implementationsOpenedNewYears('Resolve SGBD implementations', 'Migrate JS to TS files and using Deno')
 const createds = {
     createdRobot,
-    created,
+    Ccreated,
     implementations: ['Resolve SGBD implementations', 'Migrate JS to TS files and using Deno']
 }
 Object.preventExtensions(createds)
