@@ -1,4 +1,4 @@
-import { T_War } from '../types/types'
+import type { T_War } from '../types/types'
 
 export const secondWar: T_War = {
     name: 'Outra guerra',

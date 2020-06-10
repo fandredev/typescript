@@ -52,5 +52,6 @@ export const presidents = new SixthRepublic.Presidents(
     false,
     'Não'
 )
+
 console.log(SixthRepublic.viewMyPresidentNow('Bolsonaro'))
 console.log(presidents)
