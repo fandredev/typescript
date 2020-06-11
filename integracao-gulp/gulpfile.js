@@ -5,7 +5,6 @@ const source = require('vinyl-source-stream')
 const tsify = require('tsify')
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
-
 function limparDist() {
     return del(['dist']) // apaga a pasta
 }
