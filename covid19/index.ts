@@ -1,6 +1,6 @@
 import { Base } from './base'
 namespace N_Disease {
-    export class Covid extends Base { }
+    export class Covid<str, num> extends Base<str, num> { }
 }
 const date = new Date()
 const createdRegistry: Readonly<object> = new N_Disease.Covid(

@@ -1,28 +1,28 @@
 import { Font, Continents } from '../type'
 import I_Covid19 from '../interfaces'
 
-export abstract class Base implements I_Covid19 {
-    name_disease: string
+export abstract class Base<str, num> implements I_Covid19<str, num> {
+    name_disease: str
     localization_map: Continents
-    country: string
-    uf: string
+    country: str
+    uf: str
     font: Font
-    confirmed_cases: number
-    confirmed_active: number
-    confirmed_recover: number
-    confirmed_deaths: number
-    date: string
+    confirmed_cases: num
+    confirmed_active: num
+    confirmed_recover: num
+    confirmed_deaths: num
+    date: str
     constructor(
-        name_disease: string,
+        name_disease: str,
         localization_map: Continents,
-        country: string,
-        uf: string,
+        country: str,
+        uf: str,
         font: Font,
-        confirmed_cases: number,
-        confirmed_active: number,
-        confirmed_recover: number,
-        confirmed_deaths: number,
-        date: string
+        confirmed_cases: num,
+        confirmed_active: num,
+        confirmed_recover: num,
+        confirmed_deaths: num,
+        date: str
     ) {
         this.name_disease = name_disease
         this.localization_map = localization_map
