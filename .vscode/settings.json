@@ -1,4 +1,17 @@
 {
-    // "editor.formatOnPaste": true,
-    // "editor.formatOnSave": true
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.associations": {
+        "migrations": "tools"
+    },
+    "material-icon-theme.folders.color": "#90a4ae",
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "material-icon-theme.folders.color": "#ef5350",
 }
