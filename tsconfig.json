@@ -1,4 +1,8 @@
 {
+  "files": [
+    "build/main.ts",
+    "build/greet.ts"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
