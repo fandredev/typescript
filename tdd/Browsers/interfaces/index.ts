@@ -1,4 +1,4 @@
-export interface I_Browsers<Type,Number> {
+export interface I_Browsers<Type, Number> {
     name: Type
     data: Type
     version_now: Number

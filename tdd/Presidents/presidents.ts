@@ -1,6 +1,6 @@
 import { I_SixPresidentsBrazil } from './interface'
 namespace SixthRepublic {
-    abstract class SixthRepublic<Str,Bool> implements I_SixPresidentsBrazil<Str,Bool> {
+    abstract class SixthRepublic<Str, Bool> implements I_SixPresidentsBrazil<Str, Bool> {
         name: Str
         broken: Str
         term_office: Str
@@ -16,9 +16,10 @@ namespace SixthRepublic {
             this.current = current
             this.reelection = reelection
             this.corrupt = corrupt
+
         }
     }
-    export class Presidents<Str,Bool> extends SixthRepublic<Str,Bool> {
+    export class Presidents<Str, Bool> extends SixthRepublic<Str, Bool> {
         public name: Str
         public broken: Str
         public term_office: Str
@@ -37,13 +38,16 @@ namespace SixthRepublic {
             this.reelection = reelection
             this.corrupt = corrupt
         }
+        get viewPresident() {
+            return this.name
+        }
     }
-    export function viewMyPresidentNow<Str>(name: Str): Str {
+    export function viewMyPresidentNow<Str>(name: Str): Str { // poderia user um getter
         return name
     }
 }
 
-export const presidents = new SixthRepublic.Presidents<string,boolean>(
+export const presidents = new SixthRepublic.Presidents<string, boolean>(
     'Deodoro da Fonseca',
     '',
     '2 anos e 8 dias',

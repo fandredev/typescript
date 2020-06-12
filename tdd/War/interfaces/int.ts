@@ -1,10 +1,10 @@
-export interface I_War {
-    name: string,
-    number_deaths: Array<number>,
-    year: Array<number>,
-    localization: string,
-    number_deaths_precision: boolean,
-    site: string,
-    ref: string,
-    others?: object
+export interface I_War<Str, ArrayN, O, B> {
+    name: Str,
+    number_deaths: ArrayN,
+    year: ArrayN,
+    localization: Str,
+    number_deaths_precision: B,
+    site: Str,
+    ref: Str,
+    others?: O
 }

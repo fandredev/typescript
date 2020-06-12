@@ -2,7 +2,7 @@ import { I_Success_Robot_Finished } from './interfaces'
 import { Resources } from './classes'
 import type { Questions, Tech } from './type'
 namespace Robot {
-    export class RobotAPI<S,N,B,ArrStr>  extends Resources<S,N,B,ArrStr> {
+    export class RobotAPI<S, N, B, ArrStr> extends Resources<S, N, B, ArrStr> {
         public techs: ArrStr
         constructor(
             public name: S,
@@ -18,6 +18,9 @@ namespace Robot {
             super(name, color, weight, think, talk, creators, country, price)
             this.techs = techs
         }
+        get setTech(): any {
+            return this.techs
+        }
     }
 }
 
@@ -25,7 +28,7 @@ const Ccreated = new Robot.RobotAPI(
     'Robot M.Z', 'Branca', 1.90, true, false, ['Luby S.A', 'Software S.O'], ['Brasil', 'Canadá'], 74.000, ['Javascript', 'C', 'C#']
 )
 console.log(Ccreated)
-class Production<N,B,S> implements I_Success_Robot_Finished<N,B,S>  {
+class Production<N, B, S> implements I_Success_Robot_Finished<N, B, S>  {
     readonly year: N
     public finished: B
     public site: S
@@ -51,3 +54,5 @@ const createds = {
 }
 Object.preventExtensions(createds)
 console.log(createds)
+
+
