@@ -22,6 +22,15 @@ var Browsers;
             this.year_find = year_find;
             this.image_url = image_url;
         }
+        get getAllPropsNavigator() {
+            return this.name;
+        }
+        set setNameNavigatorChrome(props) {
+            this.name = props;
+        }
+        set setNameNavigatorSafari(props) {
+            this.name = props;
+        }
     }
     Browsers_1.Browsers = Browsers;
 })(Browsers || (Browsers = {}));
@@ -31,11 +40,9 @@ const browsers = {
     created,
     created2
 };
+// console.log(browsers.created.getAllPropsNavigator)
+browsers.created.setNameNavigatorChrome = 'Google Chrome + ';
+browsers.created2.setNameNavigatorChrome = 'Opera + ';
 Object.freeze(browsers);
-function filteredBrowsersName(props, props_) {
-    console.log(`Primeiro: ${props.name} | Segundo ${props_.name}`);
-}
-const objFilteredBrowsers = { name: browsers.created.name, second_name: browsers.created2.name };
-filteredBrowsersName(objFilteredBrowsers, { name: browsers.created2.name });
 console.log(browsers);
 //# sourceMappingURL=index.js.map

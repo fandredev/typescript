@@ -9,6 +9,9 @@ var Robot;
             this.name = name;
             this.techs = techs;
         }
+        get setTech() {
+            return this.techs;
+        }
     }
     Robot.RobotAPI = RobotAPI;
 })(Robot || (Robot = {}));
@@ -16,7 +19,6 @@ const Ccreated = new Robot.RobotAPI('Robot M.Z', 'Branca', 1.90, true, false, ['
 console.log(Ccreated);
 class Production {
     constructor(y, f, ss, sss, ssss) {
-        this.year = 2020;
         this.year = y;
         this.finished = f;
         this.site = ss;
