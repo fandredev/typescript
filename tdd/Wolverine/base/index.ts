@@ -1,36 +1,36 @@
 import { I_XMem } from '../interfaces'
 import type { States, FirstApariation, LastApariation, PublisingCompany } from '../types'
 export namespace Wol {
-    export abstract class baseWolverine implements I_XMem {
-        id: number
-        name: string
-        codenames: Array<string>
-        specie: string
-        ocupation: Array<string>
-        affiliations: Array<string>
-        family: Array<string>
-        country: string
+    export abstract class baseWolverine<N, S, arrS> implements I_XMem<N, S, arrS> {
+        id: N
+        name: S
+        codenames: arrS
+        specie: S
+        ocupation: arrS
+        affiliations: arrS
+        family: arrS
+        country: S
         state_now: States
-        created: Array<string>
+        created: arrS
         firstApariation: FirstApariation
         lastAparation: LastApariation
         publising_company: PublisingCompany
-        operations: Array<string>
+        operations: arrS
         constructor(
-            id: number,
-            name: string,
-            codenames: Array<string>,
-            specie: string,
-            ocupation: Array<string>,
-            affiliations: Array<string>,
-            family: Array<string>,
-            country: string,
+            id: N,
+            name: S,
+            codenames: arrS,
+            specie: S,
+            ocupation: arrS,
+            affiliations: arrS,
+            family: arrS,
+            country: S,
             state_now: States,
-            created: Array<string>,
+            created: arrS,
             firstApariation: FirstApariation,
             lastAparation: LastApariation,
             publising_company: PublisingCompany,
-            operations: Array<string>,
+            operations: arrS,
         ) {
             this.id = id
             this.name = name

@@ -1,6 +1,6 @@
 import { I_Robot } from '../interfaces'
 
-export abstract class Resources<S,N,B,ArrStr> implements I_Robot<S,N,B,ArrStr> {
+export abstract class Resources<S, N, B, ArrStr> implements I_Robot<S, N, B, ArrStr> {
     name: S
     color: S
     weight: N

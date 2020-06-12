@@ -21,4 +21,8 @@ export abstract class BaseGalaxies<S> implements Galaxies<S> {
         }
         return object
     }
+    set newImageComa(image: any) {
+        if (image)
+            this.image = image
+    }
 }

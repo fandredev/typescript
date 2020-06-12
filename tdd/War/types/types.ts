@@ -1,10 +1,13 @@
-export type T_War = {
-    name: string,
-    number_deaths: Array<number>,
-    year: Array<number>,
-    localization: string,
-    number_deaths_precision: boolean,
-    site: string,
-    ref: string,
-    others?: object
+export type T_War<S, AN, B, O> = {
+    name: S,
+    number_deaths: AN,
+    year: AN,
+    localization: S,
+    number_deaths_precision: B,
+    site: S,
+    ref: S,
+    others?: O
 }
+
+export type ReturnFuncWar = ReturnType<(<ReturnFunc>() => ReturnFunc)>
+
