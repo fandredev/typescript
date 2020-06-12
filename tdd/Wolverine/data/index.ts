@@ -1,7 +1,7 @@
 import { I_XMem } from '../interfaces'
 import { ID } from '../enum'
 
-const created: Readonly<I_XMem> = {
+const created: Readonly<I_XMem<number, string, Array<string>>> = {
     id: ID.Primary,
     name: 'James Howlett/Logan',
     codenames: ['Logan', 'Arma X', 'Caolho', 'Morte', 'Jimmy', 'Jim Logan'],
@@ -45,7 +45,7 @@ const created: Readonly<I_XMem> = {
         'Torre dos Vingadores'
     ]
 }
-const created2: Required<I_XMem> | NonNullable<I_XMem | ID.Primary | undefined> = {
+const created2: Required<I_XMem<number, string, Array<string>> | NonNullable<I_XMem<number, string, string[]>> | ID.Primary | undefined> = {
     id: ID.Primary,
     name: 'James Howlett/Logan',
     codenames: ['Logan', 'Arma X', 'Caolho', 'Morte', 'Jimmy', 'Jim Logan'],
