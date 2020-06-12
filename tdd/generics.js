@@ -86,4 +86,45 @@ OtherGenerics.lorem(objo);
 OtherGenerics.filitation(objFiliation);
 OtherGenerics.login(objLogin);
 OtherGenerics.physics(allPropsAndPhysic);
+// seguindo documentacao
+function identity(arg) {
+    return arg;
+}
+function identityWithGeneric(arg) {
+    return arg;
+}
+let output = identityWithGeneric('string'); // sem inferencia de tipos
+let inferenceOutput = identityWithGeneric('string'); // com inferencia de tipos
+let numberS = identity([1, 2, 3]);
+console.log(numberS);
+function returnVarGeneric(props) {
+    return props;
+}
+let returnVar = returnVarGeneric; // let com funcao associada ao generica
+returnVar(string);
+let oBjeto = returnVarGeneric;
+function iDentity(field, other, other2) {
+    console.log(other, other2);
+    return field;
+}
+const daTa = {
+    atr: 'Atributte',
+    age: '20',
+    field: 'input'
+};
+console.log(iDentity('Felipe', 'JUlia', true));
+function returnPlanetsAndOrder(name, distance) {
+    console.log(distance);
+    return name;
+}
+console.log(returnPlanetsAndOrder('Mercúrio', 1));
+function returnPlanetsAndPositions(position, fixed) {
+    console.log(fixed);
+    return position;
+}
+console.log(returnPlanetsAndPositions('Marte', true));
+function returnAllPlanets(array) {
+    return array;
+}
+console.log(returnAllPlanets(['Marte', 'Júpiter']));
 //# sourceMappingURL=generics.js.map

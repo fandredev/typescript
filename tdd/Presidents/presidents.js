@@ -25,6 +25,9 @@ var SixthRepublic;
             this.reelection = reelection;
             this.corrupt = corrupt;
         }
+        get viewPresident() {
+            return this.name;
+        }
     }
     SixthRepublic_1.Presidents = Presidents;
     function viewMyPresidentNow(name) {
