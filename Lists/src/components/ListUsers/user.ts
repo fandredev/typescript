@@ -7,7 +7,7 @@ interface I_Users<ID, Name, Age, Email, Password> {
     password: Password,
     stores: Array<object>
 }
-enum ID {
+const enum ID {
     Primary = 1
 }
 namespace BaseListUsers {
@@ -36,7 +36,7 @@ namespace BaseListUsers {
     }
 }
 namespace ListUsersWithHTML {
-    export class LU<ID, Name, Age, Email, Password> extends BaseListUsers.Users<ID, Name, Age, Email, Password>
+    export class ObjectUser<ID, Name, Age, Email, Password> extends BaseListUsers.Users<ID, Name, Age, Email, Password>
     {
         id: ID
         name: Name
@@ -56,9 +56,9 @@ namespace ListUsersWithHTML {
         }
     }
 }
-
-const created = new ListUsersWithHTML.LU<number, string, number, string, string | number>
-    (ID.Primary, 'Felipe', 19, 'profissionalf.andre@gmail.com', 'SA&&%%12?sq', [{
+// comentario 
+const created = new ListUsersWithHTML.ObjectUser<number, string, number, string, string | number>
+    (ID.Primary, 'Felipe', 19, 'profissionalf.andre@gmail.com', 2323131, [{
         main: 'Adaga 9201',
         second: 'Lojinha do zé',
         extra: 'Loja do xin'

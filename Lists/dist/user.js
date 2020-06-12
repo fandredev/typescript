@@ -12,13 +12,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var ID;
-(function (ID) {
-    ID[ID["Primary"] = 1] = "Primary";
-})(ID || (ID = {}));
 var BaseListUsers;
 (function (BaseListUsers) {
-    var Users = /** @class */ (function () {
+    var Users = (function () {
         function Users(id, name, age, email, password, stores) {
             this.id = id;
             this.name = name;
@@ -33,9 +29,9 @@ var BaseListUsers;
 })(BaseListUsers || (BaseListUsers = {}));
 var ListUsersWithHTML;
 (function (ListUsersWithHTML) {
-    var LU = /** @class */ (function (_super) {
-        __extends(LU, _super);
-        function LU(id, name, age, email, password, stores) {
+    var ObjectUser = (function (_super) {
+        __extends(ObjectUser, _super);
+        function ObjectUser(id, name, age, email, password, stores) {
             var _this = _super.call(this, id, name, age, email, password, stores) || this;
             _this.id = id;
             _this.name = name;
@@ -45,11 +41,11 @@ var ListUsersWithHTML;
             _this.stores = stores;
             return _this;
         }
-        return LU;
+        return ObjectUser;
     }(BaseListUsers.Users));
-    ListUsersWithHTML.LU = LU;
+    ListUsersWithHTML.ObjectUser = ObjectUser;
 })(ListUsersWithHTML || (ListUsersWithHTML = {}));
-var created = new ListUsersWithHTML.LU(ID.Primary, 'Felipe', 19, 'profissionalf.andre@gmail.com', 'SA&&%%12?sq', [{
+var created = new ListUsersWithHTML.ObjectUser(1, 'Felipe', 19, 'profissionalf.andre@gmail.com', 2323131, [{
         main: 'Adaga 9201',
         second: 'Lojinha do zé',
         extra: 'Loja do xin'
