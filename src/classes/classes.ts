@@ -1,4 +1,4 @@
-class Data {
+export class Data {
 
   // Público
   public day: number
@@ -6,14 +6,14 @@ class Data {
   year: number
 
   constructor(
-    day: number = new Date().getDay(), 
-    month: number = new Date().getMonth(), 
+    day: number = new Date().getDay(),
+    month: number = new Date().getMonth(),
     year: number = new Date().getFullYear()
   ) {
     this.day = day
     this.month = month
     this.year = year
-  } 
+  }
 }
 
 const happyBirthday = new Data(2,2)
